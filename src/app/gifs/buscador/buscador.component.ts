@@ -14,8 +14,10 @@ export class BuscadorComponent {
 
   buscar(): void {
     let valor = this.txtBuscar.nativeElement.value.trim();
+    if(valor.length > 0){
     this.gifsService.buscarGifs(valor);
     this.txtBuscar.nativeElement.value = "";
+    }
   }
 
 }

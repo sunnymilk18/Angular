@@ -2,8 +2,8 @@
     <h3 class="text-white">Gifs-App</h3>
     <hr class="text-white">
     <div class="list-group">
-      <a href="#" *ngFor="let buscado of historial" class="list-group-item-action list-group-item-action">
-        {{ buscado }}
+      <a href="#" *ngFor="let buscado of historial" (click)="buscar(buscado)" class="list-group-item-action list-group-item-action">
+        {{ buscado | titlecase }}
       </a>
     </div>
   </div>
